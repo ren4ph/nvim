@@ -2,9 +2,16 @@ local builtin = require("telescope.builtin")
 
 map = vim.keymap.set
 
-map("n", "<leader>pf", builtin.find_files, {})
-map("n", "<leader>pg", builtin.live_grep, {})
-map("n", "<leader>pb", builtin.buffers, {})
-map("n", "<leader>ph", builtin.help_tags, {})
-map("n", "<C-p>", builtin.git_files, {})
+function nmap(keym, cmd, desc)
+    desc = desc or "Blank"
+    map("n", keym, cmd, { desc = desc })
+end
+
+nmap("<leader>s", "<nop>", "Search")
+nmap("<leader>g", "<nop>", "Git")
+nmap("<leader>sf", builtin.find_files, "Search files")
+nmap("<leader>sg", builtin.live_grep, "Search (grep)")
+nmap("<leader>sb", builtin.buffers, "Search buffers")
+nmap("<leader>sh", builtin.help_tags, "Search help")
+nmap("<leader>gg", builtin.git_files, "Git files")
 

@@ -9,13 +9,56 @@ return {
 	},
 	{
 		"vague-theme/vague.nvim", version  = "*",
-		config = function()
-			vim.cmd("colorscheme vague")
-		end
 	},
+    {
+        "ellisonleao/gruvbox.nvim",
+        priority = 1000,
+        config = true,
+        opts = {}
+    },
 	{
 		"nvim-treesitter/nvim-treesitter",
 		lazy = false,
-		build = ":TsUpdate"
-	}
+		build = ":TSUpdate"
+	},
+	{
+		"theprimeagen/harpoon",
+		lazy = false,
+	}, {
+		"mbbill/undotree",
+	},
+	{
+		"tpope/vim-fugitive"
+	}, 
+	{
+		"VonHeikemen/lsp-zero.nvim",
+		lazy = false,
+		dependencies = {
+			-- LSP Support
+			{"neovim/nvim-lspconfig"},
+			{"williamboman/mason.nvim"},
+			{"williamboman/mason-lspconfig.nvim"},
+			
+			-- Autocompletion
+			{"hrsh7th/nvim-cmp"},
+			{"hrsh7th/cmp-buffer"},
+			{"hrsh7th/cmp-path"},
+			{"saadparwaiz1/cmp_luasnip"},
+			{"hrsh7th/cmp-nvim-lsp"},
+			{"hrsh7th/cmp-nvim-lua"},
+			
+			-- Snippets
+			{"L3MON4D3/LuaSnip"},
+			{"rafamadriz/friendly-snippets"},
+		}
+	},
+    {
+        "folke/which-key.nvim"
+    },
+    {
+        "windwp/nvim-autopairs",
+        event = "InsertEnter",
+        config = true
+    },
+
 }
