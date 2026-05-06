@@ -49,8 +49,8 @@ nmap("<leader>sr", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", "Sear
 map("n", "<leader>x", "<cmd>!chmod +x %<CR>", { desc = "Make current file executable", silent = true })
 
 nmap("<leader>g<leader>", ":!git add --all && git commit -m \"\"<Left>", "Stage all changes and commit")
-nmap("<leader>gp", "<cmd>!git push<CR>")
-nmap("<leader>gs", "<cmd>!git pull<CR>")
+nmap("<leader>gp", "<cmd>!git push<CR>", "Push to main branch")
+nmap("<leader>gs", "<cmd>!git pull<CR>", "Pull from main branch")
 
 nmap("<leader>rr", ":vsplit | term bash ./run.sh<CR>", "Run from project bash")
 nmap("<leader>rc", "<cmd>!cp ~/.config/nvim/example_run.sh ./run.sh && chmod +x ./run.sh<CR>:edit ./run.sh<CR>G", "Create project bash")
