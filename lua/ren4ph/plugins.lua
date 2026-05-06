@@ -60,5 +60,27 @@ return {
         event = "InsertEnter",
         config = true
     },
-
+    {
+        "folke/flash.nvim",
+        event = "VeryLazy",
+        ---@type Flash.Config,
+        opts = {}
+    },
+    {
+        "sphamba/smear-cursor.nvim",
+        opts = {}
+    },
+    {
+        "Bekaboo/dropbar.nvim",
+        dependencies = {
+            'nvim-telescope/telescope-fzf-native.nvim',
+            build = 'make'
+        }
+    },
+    {
+        "windwp/windline.nvim",
+        dependencies = {
+            "lewis6991/gitsigns.nvim"
+        }
+    }
 }

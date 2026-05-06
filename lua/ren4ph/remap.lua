@@ -20,7 +20,7 @@ end
 nmap("<leader>w", ":w!<CR>", "Write buffer to file")
 nmap("<leader>qq", ":wq<CR>", "Write/quit")
 nmap("<leader>q<leader>", ":w<CR>:Ex<CR>", "Write/stay in project")
-nmap("<leader>qx", ":e!<CR>:q!<CR>", "Quit no save")
+nmap("<leader>qd", ":e!<CR>:q!<CR>", "Discard and quit")
 
 nmap("<leader>pv", vim.cmd.Ex, "Open project view")
 
@@ -48,7 +48,15 @@ nmap("<leader>bp", "<cmd>cprev<CR>zz", "Visit prev bug")
 nmap("<leader>sr", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", "Search/Replace")
 map("n", "<leader>x", "<cmd>!chmod +x %<CR>", { desc = "Make current file executable", silent = true })
 
+nmap("<leader>g<leader>", ":!git add --all && git commit -m \"\"<Left>", "Stage all changes and commit")
+nmap("<leader>gp", "<cmd>!git push<CR>")
+nmap("<leader>gs", "<cmd>!git pull<CR>")
 
+nmap("<leader>r", "<nop>", "Run")
+nmap("<leader>rr", ":vsplit | term bash ./run.sh<CR>", "Run from project bash")
+nmap("<leader>rc", "<cmd>!cp ~/.config/nvim/example_run.sh ./run.sh && chmod +x ./run.sh<CR>:edit ./run.sh<CR>G", "Create project bash")
+nmap("<leader>rar", ":vsplit | term bash ./altrun.sh<CR>", "Run from alt project bash")
+nmap("<leader>rac", "<cmd>!cp ~/.config/nvim/example_run.sh ./altrun.sh && chmod +x ./altrun.sh<CR>:edit ./altrun.sh<CR>G", "Create alt project bash")
 
 
 
