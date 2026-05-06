@@ -53,7 +53,11 @@ return {
 		}
 	},
     {
-        "folke/which-key.nvim"
+        "folke/which-key.nvim",
+        dependencies = {
+            "nvim-mini/mini.icons",
+            "nvim-tree/nvim-web-devicons"
+        }
     },
     {
         "windwp/nvim-autopairs",

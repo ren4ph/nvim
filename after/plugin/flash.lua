@@ -7,7 +7,6 @@ function nmap(keym, cmd, desc)
 end
 
 nmap("<leader>ss", flash.jump, "Flash search")
-nmap("<leader>st", function() end, "Treesitter")
 nmap("<leader>sts", flash.treesitter_search, "Flash treesitter search")
 nmap("<leader>stt", flash.tresitter, "Flash treesitter open")
 

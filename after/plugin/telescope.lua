@@ -7,8 +7,6 @@ function nmap(keym, cmd, desc)
     map("n", keym, cmd, { desc = desc })
 end
 
-nmap("<leader>s", "<nop>", "Search")
-nmap("<leader>g", "<nop>", "Git")
 nmap("<leader>sf", builtin.find_files, "Search files")
 nmap("<leader>sg", builtin.live_grep, "Search (grep)")
 nmap("<leader>sb", builtin.buffers, "Search buffers")

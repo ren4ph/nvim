@@ -8,7 +8,6 @@ function nmap(keym, cmd, desc)
     map("n", keym, cmd, { desc = desc })
 end
 
-nmap("<leader>h", "<nop>", "Harpoon")
 nmap("<leader>ha", mark.add_file, "Add file to harpoon list")
 nmap("<leader>hh", ui.toggle_quick_menu, "View harpoon list")
 

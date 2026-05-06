@@ -52,7 +52,6 @@ nmap("<leader>g<leader>", ":!git add --all && git commit -m \"\"<Left>", "Stage 
 nmap("<leader>gp", "<cmd>!git push<CR>")
 nmap("<leader>gs", "<cmd>!git pull<CR>")
 
-nmap("<leader>r", "<nop>", "Run")
 nmap("<leader>rr", ":vsplit | term bash ./run.sh<CR>", "Run from project bash")
 nmap("<leader>rc", "<cmd>!cp ~/.config/nvim/example_run.sh ./run.sh && chmod +x ./run.sh<CR>:edit ./run.sh<CR>G", "Create project bash")
 nmap("<leader>rar", ":vsplit | term bash ./altrun.sh<CR>", "Run from alt project bash")
